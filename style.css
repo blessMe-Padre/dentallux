@@ -6,7 +6,7 @@
 
 
 body {
-    background-color: #d8d8d8;
+    background-color: #7b7575;
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
     color: #344352;
@@ -731,3 +731,143 @@ body {
 }
 
 /* /Секция HERO */
+
+/* services */
+.services {
+    padding: 70px 0;
+}
+
+.services__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.services__header h2 {
+    font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+    max-width: 633px;
+    margin: 0;
+}
+
+.services__header span {
+    text-transform: uppercase;
+    color: #92d3f2;
+}
+
+.services__header p {
+    font-size: clamp(0.875rem, 0.75rem + 0.625vw, 1.5rem);
+    max-width: 633px;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    padding: 0;
+    margin: 0 0 30px 0;
+    list-style: none;
+}
+
+.services__item {
+    border-radius: 30px;
+    background: #ecf4f7;
+    padding: 30px;
+    min-height: 130px;
+}
+
+.services__item h3 {
+    font-size: 20px;
+}
+
+.services__item a {
+    text-decoration: none;
+    color: #344352;
+}
+
+.services__item--1 {
+    background-color: #92d3f2;
+    background-image: url("./img/big-tooth.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+.services__item--1 a {
+    color: #ffffff;
+}
+
+.services__item--2 {
+    background-image: url("./icons/services-icon-1.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    background-size: 60px;
+}
+
+.services__item--3 {
+    background-image: url("./icons/services-icon-2.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    background-size: 60px;
+}
+
+.services__item--4 {
+    background-image: url("./icons/services-icon-3.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    background-size: 60px;
+}
+
+.services__item--5 {
+    background-image: url("./icons/services-icon-4.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    background-size: 60px;
+}
+
+.services__item--6 {
+    background-image: url("./icons/services-icon-5.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    background-size: 60px;
+}
+
+.services__item--7 {
+    background-image: url("./icons/services-icon-6.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    background-size: 60px;
+}
+
+
+@media (max-width: 767px) {
+    .services__list {
+        gap: 20px;
+    }
+
+    .services__item {
+        padding: 30px 15px;
+    }
+
+    .services__item h3 {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 556px) {
+    .services__list {
+        grid-template-columns: 1fr;
+    }
+
+    .services__item--1 {
+        min-height: 260px;
+        background-size: 220px;
+    }
+}
+
+/* /services */
