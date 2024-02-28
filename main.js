@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (heroSlider) {
         const slider1 = new Swiper('.hero-swiper', {
             loop: true,
+            autoplay: {
+                delay: 3000
+            },
+            speed: 700,
             spaceBetween: 40,
             slidesPerView: 1,
 
