@@ -12,11 +12,6 @@ body {
     color: #344352;
     margin: 0;
     padding: 0;
-
-    background: #222;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Noto Sans', sans-serif;
 }
 
 .container {
@@ -28,15 +23,16 @@ body {
 /* Анимация кнопок */
 .link-wrapper {
     position: relative;
+    height: 24px;
+    min-width: 60px;
     padding-left: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
 }
 
 .animation-button {
     position: absolute;
     text-decoration: none;
-    left: 30px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 30px;
     height: 2.8em;
     padding: 10px 20px;
     outline: none;
@@ -122,6 +118,11 @@ body {
     color: #344352;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header__link-wrapper a:hover {
+    color: #e1b98e;
 }
 
 .header__button {
@@ -609,6 +610,7 @@ body {
     .header-nav.is-active {
         opacity: 1;
         visibility: visible;
+        z-index: 9999;
     }
 
     .header-nav ul {
@@ -642,6 +644,11 @@ body {
     overflow: hidden;
 }
 
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
 .hero__item {}
 
 .hero__item--first {
@@ -652,6 +659,19 @@ body {
     background-size: contain;
 }
 
+.hero__item--second {
+    background-color: #92d3f2;
+    background-image: url('img/hero-slide-2.webp');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+}
+
+.hero__item--second .hero__title-span {
+    background-color: #ffffff;
+    color: #92d3f2;
+}
+
 .hero__title {
     display: inline-block;
     position: relative;
@@ -660,9 +680,9 @@ body {
     font-size: clamp(1.5rem, 1.175rem + 1.625vw, 3.125rem);
     font-weight: 700;
     line-height: 1.2;
-    max-width: 737px;
+    max-width: 830px;
     padding-left: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
-
+    padding-right: 10px;
     z-index: 1;
 }
 
@@ -697,6 +717,17 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: left;
+}
+
+@media (max-width: 570px) {
+    .hero__item {
+        min-height: 600px;
+        padding: 50px 0;
+    }
+
+    .hero__inner p {
+        font-size: 14px;
+    }
 }
 
 /* /Секция HERO */
