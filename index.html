@@ -8,6 +8,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="style.css">
     <title>Денталлюкс</title>
 </head>
@@ -92,11 +93,66 @@
         </div>
     </header>
     <main>
+        <div class="container">
+            <section class="hero">
+                <div class="swiper-container">
+                    <div class="hero-swiper">
+                        <div class="swiper-wrapper">
 
-        main
+                            <div class="hero__item hero__item--first swiper-slide">
+                                <h2 class="hero__title">Профессиональная система
+                                    отбеливания зубов ZOOM-4
+                                    <span class="hero__title-span">15&nbsp;000&nbsp;₽</span>
+                                </h2>
+
+                                <div class="hero__inner">
+                                    <img src="icons/tooth-icon.svg" width="20" height="20" alt="tooth">
+                                    <p>До 8 оттенков светлее за 45 минут</p>
+                                </div>
+
+                                <div class="hero__inner">
+                                    <img src="icons/tooth-icon.svg" width="20" height="20" alt="tooth">
+                                    <p>Домашнее отбеливание в подарок</p>
+                                </div>
+
+
+                                <div class="link-wrapper">
+                                    <a class="popup-link animation-button" href="#">Записаться на прием</a>
+                                </div>
+                            </div>
+
+                            <div class="hero__item swiper-slide">
+                                <h2 class="hero__title">Профессиональная система
+                                    отбеливания зубов ZOOM-4</h2>
+                                <span class="hero__title-span">15 000 ₽</span>
+
+                                <div class="hero__inner">
+                                    <img src="icons/tooth-icon.svg" width="20" height="20" alt="tooth">
+                                    <p>До 8 оттенков светлее за 45 минут</p>
+                                </div>
+
+                                <div class="hero__inner">
+                                    <img src="icons/tooth-icon.svg" width="20" height="20" alt="tooth">
+                                    <p>Домашнее отбеливание в подарок</p>
+                                </div>
+
+                                <div class="link-wrapper">
+                                    <a class="popup-link animation-button" href="#">Записаться на прием</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <!-- /container -->
+        </div>
     </main>
 
     <footer>footer</footer>
+    <script src="swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 

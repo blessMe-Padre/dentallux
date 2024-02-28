@@ -21,4 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
             isClosed = true;
         }
     }
+
+    // MAIN SLIDER
+
+    const heroSlider = document.querySelector('.hero-swiper');
+    if (heroSlider) {
+        const slider1 = new Swiper('.hero-swiper', {
+            loop: true,
+            spaceBetween: 40,
+            slidesPerView: 1,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+        });
+    }
 });

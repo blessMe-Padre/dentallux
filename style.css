@@ -1,3 +1,10 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: #d8d8d8;
     font-family: "Noto Sans", sans-serif;
@@ -5,6 +12,11 @@ body {
     color: #344352;
     margin: 0;
     padding: 0;
+
+    background: #222;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .container {
@@ -12,6 +24,59 @@ body {
     padding: 0 20px;
     margin: 0 auto;
 }
+
+/* Анимация кнопок */
+.link-wrapper {
+    position: relative;
+    padding-left: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
+}
+
+.animation-button {
+    position: absolute;
+    text-decoration: none;
+    left: 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 2.8em;
+    padding: 10px 20px;
+    outline: none;
+    overflow: hidden;
+    color: #ffffff;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    z-index: 1;
+
+    background-color: #e1b98e;
+}
+
+.animation-button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    line-height: 20em;
+    left: -4em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.animation-button:hover {
+    color: #fff;
+}
+
+.animation-button:hover::before {
+    box-shadow: inset 0 0 0 10em #ee3769;
+}
+
+/* / Анимация кнопок */
 
 /* header */
 .header {
@@ -560,3 +625,78 @@ body {
 }
 
 /* /Навигация */
+
+/* Секция HERO */
+.hero {
+    position: relative;
+}
+
+.hero__item {
+    border-radius: 20px;
+    padding: 90px 0;
+}
+
+.swiper-container {
+    width: 0;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.hero__item {}
+
+.hero__item--first {
+    background-color: #dfebf0;
+    background-image: url('img/hero-slide-1.webp');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+}
+
+.hero__title {
+    display: inline-block;
+    position: relative;
+    color: rgb(52, 67, 82);
+    font-family: Noto Sans;
+    font-size: clamp(1.5rem, 1.175rem + 1.625vw, 3.125rem);
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 737px;
+    padding-left: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
+
+    z-index: 1;
+}
+
+.hero__title-span {
+    position: absolute;
+    top: -15px;
+    right: 0;
+
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+
+    border-radius: 10px;
+    padding: 9px 30px;
+    background: #92d3f2;
+    transform: rotate(6deg);
+
+    z-index: -1;
+}
+
+.hero__inner {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-left: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
+    margin-bottom: 30px;
+}
+
+.hero__inner p {
+    margin: 0;
+    color: rgb(52, 67, 82);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* /Секция HERO */
