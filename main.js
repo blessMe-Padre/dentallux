@@ -42,6 +42,41 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // technologies SLIDER
+
+    const technologiesSlider = document.querySelector('.technologies-swiper');
+    if (technologiesSlider) {
+        const slider1 = new Swiper('.technologies-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000
+            },
+            speed: 700,
+            spaceBetween: 40,
+            slidesPerView: 3,
+
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15
+                },
+                769: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+
     // Swiper-team
     const teamSlider = () => {
         const itemSlider = function () {
