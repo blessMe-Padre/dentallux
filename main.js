@@ -311,5 +311,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initPopup();
 
+    ScrollOut();
+
     // DOM
 });
