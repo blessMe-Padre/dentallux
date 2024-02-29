@@ -1627,13 +1627,13 @@ body {
 
 
 .button {
-    /* cursor: pointer;
+    cursor: pointer;
     margin: 20px 0 0 0;
     border: 1px solid var(--light-brown);
     border-radius: 30px;
     background-color: var(--light-brown);
     color: var(--white);
-    padding: 9px 30px; */
+    padding: 9px 30px;
 }
 
 .contact--second_img {
@@ -1833,4 +1833,149 @@ body {
     .footer__list {
         gap: 30px;
     }
+}
+
+
+/* Стили для popup */
+
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 16, 27, .7);
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: opacity 0.3s ease;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.popup__title {
+    text-align: start;
+    color: var(--black);
+    font-family: Noto Sans;
+    font-size: clamp(16px, 5vw, 30px);
+    font-weight: 700;
+    padding-bottom: 10px;
+
+}
+
+.popup__desc {
+    text-align: start;
+    color: rgb(52, 67, 82);
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 70;
+}
+
+.popup__body {
+    width: 100%;
+    min-height: 100%;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__content {
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+    background: var(--white);
+    text-align: center;
+    background: var(--white);
+}
+
+
+.popup__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.popup__btn {
+    margin-top: -10px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: -30px;
+    right: -10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    background-color: var(--light-brown);
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .popup__title {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+.form__input {
+    border-radius: 30px;
+    background: var(--gray);
+    width: auto;
+    padding: 20px;
+    border: none;
+
+}
+
+.form__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    text-align: start;
+}
+
+.popup__label {
+    color: rgb(52, 67, 82);
+    font-family: Noto Sans;
+    font-size: clamp(14px, 1vw, 18px);
+    padding: 10px 0;
+}
+
+.form__button {
+    border-radius: 30px;
+    background: rgb(225, 185, 142);
+    color: var(--white);
+    width: 100%;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 600;
+    padding: 15px 30px !important;
+}
+
+.form-section__descriptions {
+    padding: 15px 0;
+    text-align: start;
+    max-width: 70%;
+    color: rgb(86, 105, 116);
+}
+
+.lock {
+    overflow: hidden;
 }
