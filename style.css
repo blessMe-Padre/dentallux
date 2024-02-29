@@ -204,7 +204,6 @@ table {
 
 
 body {
-    /* background-color: #7b7575; */
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
     color: #344352;
@@ -225,6 +224,20 @@ body {
     min-width: 60px;
     padding-left: clamp(1.25rem, 0.5rem + 3.75vw, 5rem);
 }
+
+.link-wrapper--mt {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.link-wrapper--mt .animation-button::before {
+    width: 22em;
+    height: 20em;
+    left: -2em;
+}
+
+
 
 .animation-button {
     position: absolute;
@@ -1529,52 +1542,34 @@ body {
 /* Стили для контактов */
 
 .contact__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
 }
 
-@media(max-width: 1920px) {
-    .contact--first {
-        padding: 36px 30px;
-        width: 30%;
-        border-radius: 20px;
-        background-color: var(--light-gray);
+@media(max-width:767px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
 
+.contact--first {
+    background: #ecf4f7;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
 .contact--second {
-    max-width: 60%;
     position: relative;
+}
+
+.contact--second iframe {
+    border-radius: 20px;
 }
 
 .map {
     border-radius: 20px;
-}
-
-@media (max-width:1200px) {
-    .map {
-        width: 600px;
-    }
-}
-
-@media (max-width:769px) {
-    .map {
-        width: 400px;
-    }
-}
-
-@media (max-width:450px) {
-    .contact--first {
-        width: 100% !important;
-    }
-
-    .contact--second_img {
-        right: -111px;
-
-    }
 }
 
 .contact--title {
@@ -1609,13 +1604,13 @@ body {
 
 
 .button {
-    cursor: pointer;
+    /* cursor: pointer;
     margin: 20px 0 0 0;
     border: 1px solid var(--light-brown);
     border-radius: 30px;
     background-color: var(--light-brown);
     color: var(--white);
-    padding: 9px 30px;
+    padding: 9px 30px; */
 }
 
 .contact--second_img {
