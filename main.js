@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
 
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.arrow__next--technologies',
+                prevEl: '.arrow__prev--technologies',
             },
         });
     }

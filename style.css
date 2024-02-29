@@ -164,21 +164,42 @@ table {
 
 
 .block {
-    display: block;
+    display: flex;
+    gap: 10px;
 }
 
 .hidden {
     display: none;
 }
 
+.relative {
+    position: relative;
+    padding-bottom: 65px;
+}
+
 @media(max-width:768px) {
     .block {
-        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
     }
+}
 
-    .hidden {
-        display: block !important;
-    }
+/* Классы стрелочек */
+
+.arrow__swiper {
+    border: 1px solid var(--light-gray);
+    border-radius: 30px;
+    background: var(--light-gray);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.arrow__swiper:hover {
+    background: var(--blue);
 }
 
 
@@ -1061,7 +1082,6 @@ body {
 
 /* /services */
 
-
 /* Услуги и цены */
 
 .services {
@@ -1087,8 +1107,6 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     list-style: none;
-
-
 }
 
 .services__list--item {
@@ -1096,60 +1114,8 @@ body {
     padding: 30px;
     border-radius: 30px;
     background-color: var(--light-gray);
-    width: 276px;
     min-height: 150px;
     transition: all .5s ease-in-out;
-
-}
-
-@media (max-width: 769px) and (min-width: 450px) {
-    .services__list--item {
-        width: 160px;
-    }
-
-    .services__list li:last-child {
-        width: 38% !important;
-    }
-
-    .services__list li:nth-last-child(2) {
-        width: 38% !important;
-    }
-
-    .services__list li:nth-last-child(3) {
-        width: 38% !important;
-    }
-
-    .services__list li:nth-last-child(4) {
-        width: 38% !important;
-    }
-}
-
-@media (max-width: 450px) {
-    .services__list--item {
-        width: 111px;
-    }
-
-    .services__list li:nth-last-child(1) {
-        width: 85% !important;
-    }
-
-    .services__list li:nth-last-child(2) {
-        width: 85% !important;
-    }
-}
-
-@media (max-width: 400px) {
-    .services__list--item {
-        width: 87px;
-    }
-
-    .services__list li:nth-last-child(1) {
-        width: 85% !important;
-    }
-
-    .services__list li:nth-last-child(2) {
-        width: 85% !important;
-    }
 }
 
 .services__list--item_img {
@@ -1159,21 +1125,11 @@ body {
     width: 30px;
     padding: 10px;
     min-height: 20px;
-
 }
-
-/* .services__list--item:hover .services__list--item_img path{
-	background-color: var(--light-brown);
-} */
 
 .services__list--item:hover .services__list--item_img {
     background-color: var(--white);
 }
-
-/* .services__list--item_img path {
-	transition: all .5s ease-in-out;
-} */
-
 
 .services__list--item:hover .services__list--item_img path {
     transition: all .5s ease-in-out;
@@ -1190,7 +1146,6 @@ body {
 
 }
 
-
 .services__list--item:hover .services__list--item_title {
     color: var(--white);
 }
@@ -1203,12 +1158,9 @@ body {
     background-color: var(--blue);
 }
 
-
 .services__list--item:active .services__list--item_img path {
     fill: var(--blue);
 }
-
-
 
 .services__list--item_title {
     color: var(--black);
@@ -1236,19 +1188,16 @@ body {
     background-image: url('../img/services/srvs_10.png');
     background-position: right;
     background-repeat: no-repeat;
-    width: 44%;
     background-size: 50%;
 }
 
 
 .services__list li:nth-last-child(2) {
-    width: 44%;
     background-image: url('../img/services/srvs_9.png');
     background-repeat: no-repeat;
     background-position: 10px;
     background-position: right;
     background-size: 50%;
-
 }
 
 
@@ -1270,12 +1219,49 @@ body {
     display: none;
 }
 
+@media (max-width: 932px) {
+
+    .services__list--item-1,
+    .services__list--item-2,
+    .services__list--item-3,
+    .services__list--item-4,
+    .services__list--item-5,
+    .services__list--item-6 {
+        width: 30%;
+    }
+
+    .services__list--item-7,
+    .services__list--item-8,
+    .services__list--item-9,
+    .services__list--item-10 {
+        width: 46.5%;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .services__list--item-1,
+    .services__list--item-2,
+    .services__list--item-3,
+    .services__list--item-4,
+    .services__list--item-5,
+    .services__list--item-6,
+    .services__list--item-7,
+    .services__list--item-8 {
+        width: 46.5%;
+    }
+
+    .services__list--item-9,
+    .services__list--item-10 {
+        width: 100%;
+    }
+}
+
 /* Стили для team */
 
 .team {
     margin-top: clamp(10px, 5vw, 20px);
     margin-bottom: clamp(10px, 5vw, 20px);
-    padding: 10px;
 }
 
 .title__team {
@@ -1316,7 +1302,6 @@ body {
     text-align: left;
 }
 
-
 .team--item_desc {
     color: var(--black);
     font-size: clamp(12px, 1vw, 18px);
@@ -1326,7 +1311,6 @@ body {
     text-align: left;
     padding-bottom: 30px;
 }
-
 
 .team--item_exp {
     color: var(--white);
@@ -1650,7 +1634,12 @@ body {
 /* technologies */
 
 .technologies {
+    position: relative;
     padding: 70px 0;
+}
+
+.technologies-swiper {
+    position: relative;
 }
 
 .technologies__title {

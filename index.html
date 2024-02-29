@@ -203,14 +203,24 @@
             </section>
 
             <section class="technologies">
-                <h2 class="technologies__title">Инновационные <span>технологии и оборудование</span></h2>
+                <div class="flex">
+                    <h2 class="technologies__title">Инновационные <span>технологии и оборудование</span></h2>
+
+                    <div class="block">
+                        <button class="arrow__swiper arrow__prev--technologies">
+                            <img src="./icons/arrow_prev.svg" alt="влево">
+                        </button>
+                        <button class="arrow__swiper arrow__next--technologies">
+                            <img src="./icons/arrow_next.svg" alt="вправо">
+                        </button>
+                    </div>
+                </div>
 
                 <p class="technologies__text">
                     Предлагаем полный набор стоматологических услуг от профессионального отбеливания до полной
                     реставрации зубов. Высококвалифицированные врачи-стоматологи, новейшие технологии и современное
                     оборудование.
                 </p>
-
                 <div class="swiper-container">
                     <div class="technologies-swiper">
                         <div class="swiper-wrapper">
@@ -227,13 +237,10 @@
 
                         </div>
                     </div>
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </section>
 
-            <!-- <section class="services">
+            <section class="services relative">
                 <h2 class="title__services">
                     <span class="title__services--first">Услуги</span> и цены
                 </h2>
@@ -241,7 +248,7 @@
                 <div>
                     <ul class="services__list">
 
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-1">
                             <div class="services__list--item_container">
 
                                 <svg class="services__list--item_img" width="40.000000" height="40.000000"
@@ -264,7 +271,7 @@
                             <p class="services__list--item_title">Профилактика и гигиена полости рта</p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-2">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="33.750000" height="16.552490"
                                     viewBox="0 0 33.75 16.5525" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +297,7 @@
                             <p class="services__list--item_title">Пародонтология</p>
                             <p class="services__list--item_price">от 350 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-3">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="39.687500" height="33.841553"
                                     viewBox="0 0 39.6875 33.8416" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -313,7 +320,7 @@
                             <p class="services__list--item_title">Эстетическая стоматология</p>
                             <p class="services__list--item_price">от 2500 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-4">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="30.747070" height="36.239014"
                                     viewBox="0 0 30.7471 36.239" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -333,7 +340,7 @@
                             <p class="services__list--item_title">Отбеливание зубов</p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-5">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="19.569336" height="37.816650"
                                     viewBox="0 0 19.5693 37.8167" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -356,7 +363,7 @@
                             <p class="services__list--item_title">Отбеливание зубов</p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-6">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="32.116211" height="39.601807"
                                     viewBox="0 0 32.1162 39.6018" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -385,7 +392,7 @@
                             <p class="services__list--item_title">Отбеливание зубов Zoom 4 </p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-7">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="39.043945" height="25.833740"
                                     viewBox="0 0 39.0439 25.8337" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -406,7 +413,7 @@
                             <p class="services__list--item_title">Ортодонтия (исправление прикуса)</p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-8">
                             <div class="services__list--item_container">
                                 <svg class="services__list--item_img" width="30.000000" height="35.000000"
                                     viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -426,8 +433,7 @@
                             <p class="services__list--item_title">Элайнеры, ортодонтическое лечение</p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-9">
                             <div class="services__list--item_container">
                                 <img class="services__list--item_img" src="img/services/srvs_4.svg" alt="service_1">
                                 <a href="" class="services__list--item_link"><img src="./icons/arrow-item.svg" alt="">
@@ -436,7 +442,7 @@
                             <p class="services__list--item_title">Ортодонтия (исправление прикуса)</p>
                             <p class="services__list--item_price">от 250 Р</p>
                         </li>
-                        <li class="services__list--item">
+                        <li class="services__list--item services__list--item-10">
                             <div class="services__list--item_container">
                                 <img class="services__list--item_img" src="img/services/srvs_4.svg" alt="service_1">
                                 <a href="" class="services__list--item_link"><img src="./icons/arrow-item.svg" alt="">
@@ -449,7 +455,7 @@
                 </div>
             </section>
 
-            <section class="team">
+            <section class="team relative">
                 <div class="flex">
                     <h2 class="title__team">
                         Квалифицированные <span class="title__services--first">специалисты</span>
@@ -516,7 +522,7 @@
                 </div>
             </section>
 
-            <section class="smile">
+            <section class="smile relative">
 
                 <div class="flex">
                     <h2 class="title__team">
@@ -583,7 +589,7 @@
                 </div>
             </section>
 
-            <section class="techno">
+            <section class="techno relative">
                 <h2 class="title__team">
                     <span class="title__services--first">Новые технологии
                         в стоматологии </span> — одна
@@ -656,7 +662,7 @@
                 </ul>
             </section>
 
-            <section class="contact">
+            <!-- <section class="contact relative">
                 <div class="contact__container">
                     <div class="contact--first">
                         <h2 class="contact--title">Контакты</h2>
