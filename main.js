@@ -108,11 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         },
                         769: {
                             slidesPerView: 3,
-                            spaceBetween: 15
+                            spaceBetween: 30
                         },
                         1200: {
                             slidesPerView: 4,
-                            spaceBetween: 10
+                            spaceBetween: 30
                         }
                     }
                 });

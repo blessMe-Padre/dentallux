@@ -1240,6 +1240,19 @@ body {
 
 @media (max-width: 560px) {
 
+    .services__list--item {
+        padding: 30px 10px;
+    }
+
+    .services__list--item_title {
+        line-height: 1.2;
+    }
+
+    .services__list--item svg {
+        width: 40px;
+        height: 40px;
+    }
+
     .services__list--item-1,
     .services__list--item-2,
     .services__list--item-3,
@@ -1276,19 +1289,13 @@ body {
     padding: 25px;
     background-color: var(--light-gray);
     border-radius: 20px;
-    min-height: 430px;
+    min-height: 360px;
 }
 
 .team__swiper {
     overflow: hidden;
     min-width: 100%;
     width: 0;
-}
-
-
-
-.team--item__container {
-    width: 287px;
 }
 
 .team--item_name {
@@ -1325,8 +1332,9 @@ body {
 
 .team--item_img {
     border-radius: 20px;
-    width: 293px;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
