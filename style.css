@@ -302,7 +302,7 @@ body {
 }
 
 .animation-button:hover::before {
-    box-shadow: inset 0 0 0 10em #ee3769;
+    box-shadow: inset 0 0 0 10em #04a0e8;
 }
 
 .link-wrapper--header-button {
@@ -1222,19 +1222,21 @@ body {
 }
 
 .services__list li:last-child {
-    background-image: url('../img/services/srvs_10.png');
+    min-height: 150px;
+    background-image: url('./img/services/srvs_9-1.png');
     background-position: right;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: contain;
+    background-color: #92d3f2;
 }
 
-
 .services__list li:nth-last-child(2) {
-    background-image: url('../img/services/srvs_9.png');
+    min-height: 150px;
+    background-image: url('./img/services/srvs_10-1.png');
     background-repeat: no-repeat;
-    background-position: 10px;
     background-position: right;
-    background-size: 50%;
+    background-size: contain;
+    background-color: #e1b98e;
 }
 
 
