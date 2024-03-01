@@ -894,7 +894,8 @@ body {
 
 .hero__item--first {
     background-color: #dfebf0;
-    background-image: url('img/hero-slide-1.webp');
+    background-image: url('img/image-1.webp'), url('img/rect-1.png');
+
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: contain;
@@ -902,9 +903,10 @@ body {
 
 .hero__item--second {
     background-color: #92d3f2;
-    background-image: url('img/hero-slide-2.webp');
+    background-image: url('img/image-2.webp'), url('img/rect-2.png');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right -150px,
+        bottom right;
     background-size: contain;
 }
 
@@ -959,6 +961,13 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: left;
+}
+
+@media (max-width: 767px) {
+    .hero__item--second {
+        background-position: bottom right -40px,
+            bottom right;
+    }
 }
 
 @media (max-width: 570px) {
