@@ -235,7 +235,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1480px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -306,7 +306,7 @@ body {
 }
 
 .link-wrapper--header-button {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
     padding-left: 0;
     width: 280px;
 }
@@ -1037,6 +1037,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     z-index: 1;
+    max-width: 335px;
 }
 
 .services-1__item a {
@@ -1157,7 +1158,8 @@ body {
     transition: all .5s ease-in-out;
     background-color: var(--blue);
     border-radius: 6px;
-    width: 30px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     min-height: 20px;
 }
